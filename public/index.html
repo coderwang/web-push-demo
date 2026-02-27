@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Push Demo</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔔 Web Push Demo</h1>
+    <p class="subtitle">订阅推送通知，即使关闭页面也能收到消息</p>
+
+    <div class="status loading" id="status">🔍 检测浏览器环境...</div>
+
+    <div class="btn-group">
+      <button class="btn primary" id="subscribeBtn" disabled>🔔 订阅通知</button>
+      <button class="btn danger" id="unsubscribeBtn" disabled>❌ 取消订阅</button>
+      <button class="btn success" id="testBtn" disabled>📨 测试推送</button>
+    </div>
+
+    <div class="info-box">
+      <h3>📋 订阅信息</h3>
+      <pre id="subscriptionInfo">-</pre>
+    </div>
+
+    <div class="steps">
+      <h3>🚀 快速开始</h3>
+      <ol>
+        <li>点击 <strong>"🔔 订阅通知"</strong> 按钮</li>
+        <li>授予浏览器通知权限</li>
+        <li>点击 <strong>"📨 测试推送"</strong> 测试</li>
+        <li><strong>关闭页面</strong>，再次点击测试推送，仍会收到通知！</li>
+      </ol>
+    </div>
+
+    <div class="info-box">
+      <h3>⚠️ 重要提示</h3>
+      <ul>
+        <li>✅ 必须使用 <strong>HTTPS</strong>（本地 localhost 除外）</li>
+        <li>✅ 支持 Chrome / Edge / Firefox / Safari 16.4+</li>
+        <li>✅ iOS 需将网站添加到主屏幕（PWA）</li>
+        <li>❌ 浏览器进程完全关闭后无法接收推送</li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
